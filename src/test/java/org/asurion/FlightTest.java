@@ -37,7 +37,7 @@ public class FlightTest {
 //    }
 
     @Test
-    public void getHeaderFlightDetails(){
+    public void getHeaderFlightDetails3(){
 //        TravelHomePage thp = new TravelHomePage(driver);
 //        thp.gotoHome();
         String flightClass = thp.getNavigationBar().getFlightsClassName();
@@ -52,7 +52,70 @@ public class FlightTest {
         thp.checkAvailability("Origin", "destination");
     }
 
-    @AfterTest  
+    @Test
+    public void getHeaderFlightDetails2(){
+//        TravelHomePage thp = new TravelHomePage(driver);
+//        thp.gotoHome();
+        String flightClass = thp.getNavigationBar().getFlightsClassName();
+        System.out.println(flightClass);
+        Assert.assertEquals(flightClass, "selected");
+        System.out.println(thp.getNavigationBar().getLinkCount());
+
+        thp.setBookingStrategy(new MultiTrip());
+        thp.checkAvailability("Origin", "destination");
+
+        thp.setBookingStrategy(new RoundTrip());
+        thp.checkAvailability("Origin", "destination");
+    }
+    @Test
+    public void getHeaderFlightDetails1(){
+//        TravelHomePage thp = new TravelHomePage(driver);
+//        thp.gotoHome();
+        String flightClass = thp.getNavigationBar().getFlightsClassName();
+        System.out.println(flightClass);
+        Assert.assertEquals(flightClass, "selected");
+        System.out.println(thp.getNavigationBar().getLinkCount());
+
+        thp.setBookingStrategy(new MultiTrip());
+        thp.checkAvailability("Origin", "destination");
+
+        thp.setBookingStrategy(new RoundTrip());
+        thp.checkAvailability("Origin", "destination");
+    }
+
+    @Test
+    public void getHeaderFlightDetails4(){
+//        TravelHomePage thp = new TravelHomePage(driver);
+//        thp.gotoHome();
+        String flightClass = thp.getNavigationBar().getFlightsClassName();
+        System.out.println(flightClass);
+        Assert.assertEquals(flightClass, "selected");
+        System.out.println(thp.getNavigationBar().getLinkCount());
+
+        thp.setBookingStrategy(new MultiTrip());
+        thp.checkAvailability("Origin", "destination");
+
+        thp.setBookingStrategy(new RoundTrip());
+        thp.checkAvailability("Origin", "destination");
+    }
+
+    @Test
+    public void getHeaderFlightDetails5(){
+//        TravelHomePage thp = new TravelHomePage(driver);
+//        thp.gotoHome();
+        String flightClass = thp.getNavigationBar().getFlightsClassName();
+        System.out.println(flightClass);
+        Assert.assertEquals(flightClass, "selected");
+        System.out.println(thp.getNavigationBar().getLinkCount());
+
+        thp.setBookingStrategy(new MultiTrip());
+        thp.checkAvailability("Origin", "destination");
+
+        thp.setBookingStrategy(new RoundTrip());
+        thp.checkAvailability("Origin", "destination");
+    }
+
+    @AfterTest
     public void closeBrowser(){
         driver.quit();
     }
