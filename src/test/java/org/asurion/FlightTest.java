@@ -52,7 +52,7 @@ public class FlightTest {
         thp.checkAvailability("Origin", "destination");
     }
 
-    @AfterTest
+    @AfterTest  
     public void closeBrowser(){
         driver.quit();
     }
