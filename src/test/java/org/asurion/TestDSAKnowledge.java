@@ -29,6 +29,8 @@ public class TestDSAKnowledge {
         Integer[] integerArray = Arrays.stream(a2).boxed().toArray(Integer[]::new);
         List<Integer> arrList = new ArrayList<Integer>(List.of(integerArray));
 
+        System.out.println("Now u will see the differece by Fetch and not merge it before");
+
 
     }
 
