@@ -8,7 +8,7 @@ import java.util.List;
 
 public abstract class AbstractComponent {
     WebElement pageSectionLocator;
-
+    # its a new line code
     public AbstractComponent(WebDriver driver, By pageSectionLocator) {
         this.pageSectionLocator = driver.findElement(pageSectionLocator);
     }
